@@ -43,12 +43,12 @@ class Vendors::RegistrationsController < Devise::RegistrationsController
   end
   # If you have extra params to permit, append them to the sanitizer.
    def configure_sign_up_params
-       devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:email, :password, :password_confirmation, :name, :discount_info, :address) }
+       devise_parameter_sanitizer.permit(:sign_up) { |u| u.permit(:email, :password, :password_confirmation, :name, :discount_info, :address) }
    end
 
   # If you have extra params to permit, append them to the sanitizer.
    def configure_account_update_params
-       devise_parameter_sanitizer.for(:account_update) { |u| u.permit(:email, :password, :password_confirmation, :name, :discount_info, :address, :current_password) }
+       devise_parameter_sanitizer.permit(:account_update) { |u| u.permit(:email, :password, :password_confirmation, :name, :discount_info, :address, :current_password) }
    end
 
   # The path used after sign up.
