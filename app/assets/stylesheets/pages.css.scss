@@ -1,0 +1,73 @@
+$navbar-inverse-bg: #08088A;
+
+#logo {
+	float: left;
+	font: 1.7em;
+	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: -1px;
+	font-weight: bold;
+}
+
+#logo:hover {
+	color: #fff;
+	text-decoration: none;
+}
+
+.btn-default navbar-btn {
+	background-color: #4CAF50;
+}
+
+#nav-login-button {
+	color: #fff;
+	font-size: 16px;
+}
+
+.white {
+	border: 1px solid black;
+	margin-top: 8px;
+	background: white;
+	padding: 5px
+
+}
+
+.background {
+	background-image: url(mountain.jpg);
+	background-size:cover;
+	background-repeat:no-repeat;
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  height: auto;
+}
+.jumbotron {
+	opacity:0.6;
+}
+
+#current {
+	color: gray;
+	margin-top: 19px;
+	margin-right: 5px;
+	}
+
+.map {
+	margin-left: 5px;
+}
+#text {
+	margin-left: 20px;
+	margin-right: 10px;
+	margin-top: 5px;
+}
+.center {
+	margin: auto;
+    width: 60%;
+    padding: 10px;
+    text-align: center;
+    background-color: black;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+#update {
+	margin-top: 15px;
+}

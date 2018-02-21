@@ -1,0 +1,64 @@
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <%= link_to "Discount Now", root_path, class: "navbar-brand", id: "logo" %>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li> <%= link_to "Home", root_path %> </li>
+        <li> <%= link_to "About", about_path %></li>
+        <li> <%= link_to "FAQ", faq_path %></li>
+        <li> <%= link_to "Contact Us", contact_path %></li>
+      </ul>
+      
+      <ul class="nav navbar-nav navbar-right">
+        <%= link_to "Login", new_customer_session_path, id: "nav-login-button", type: "button", class: "btn btn-primary navbar-btn"%>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<body class= "background">
+<div class= "center">
+<h2>Log in</h2>
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password %><br />
+    <%= f.password_field :password, autocomplete: "off" %>
+  </div>
+
+  <% if devise_mapping.rememberable? -%>
+    <div class="field">
+      <%= f.check_box :remember_me %>
+      <%= f.label :remember_me %>
+    </div>
+  <% end -%>
+
+  <div class="actions">
+    <%= f.submit "Log in", class: "btn btn-primary" %>
+  </div>
+<% end %>
+
+<%= render "vendors/shared/links" %>
+
+<p>Not a vendor? <%= link_to "Sign in as customer", new_customer_session_path %> </p>
+
+</div>
+</body>
